@@ -77,14 +77,18 @@
         font-family: poppins;
         font-weight: 700;
         font-size: 48px;
-        color: #222222;
+        color: #ffffff;
+      }
+
+      .hero .highlight {
+        color: rgb(186, 206, 10);
       }
 
       .hero p {
         font-family: poppins;
         font-weight: 400;
         font-size: 18px;
-        color: #222222;
+        color: #ffffff;
         max-width: 700px;
       }
 
@@ -103,7 +107,7 @@
         font-family: poppins;
         font-weight: 600;
         border: 2px solid teal;
-        border-radius: 3px;
+        border-radius: 5px;
         padding: 10px 25px;
         cursor: pointer;
       }
@@ -127,7 +131,7 @@
         background: transparent;
         color: #ffffff;
         border: 2px solid #ffffff;
-        border-radius: 3px;
+        border-radius: 5px;
       }
 
       .hero #hbtn2:hover {
@@ -139,9 +143,24 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        background: #edededdd;
+        background: #ffffff;
         padding: 8px 15px;
         border-radius: 999px;
+      }
+
+      .hero .capsule .dot {
+        width: 12px;
+        height: 12px;
+        background: teal;
+        border-radius: 999px;
+        box-shadow: 0px 0px 8px rgb(0, 153, 153);
+      }
+
+      .hero .capsule p {
+        font-family: poppins;
+        font-weight: 500;
+        font-size: 14px;
+        color: #222222;
       }
 
       .card-section {
@@ -180,6 +199,8 @@
         width: 250px;
         gap: 7px;
         border-radius: 10px;
+        justify-content: center;
+        align-items: center;
       }
 
       .card:hover {
@@ -411,12 +432,17 @@
     </header>
 
     <main>
+      <!-- Hero section -->
+
       <div class="hero">
         <div class="capsule">
           <div class="dot"></div>
           <p>Early Access Now Open</p>
         </div>
-        <h1>Structured thinking, not just note-taking.</h1>
+        <h1>
+          Structured thinking, <br />
+          <span class="highlight">Not just note-taking.</span>
+        </h1>
         <p>
           A private space to store notes, links, and learning summaries —
           designed to help you think clearly, connect ideas, and turn learning
@@ -440,6 +466,8 @@
         </div>
       </div>
 
+      <!-- card section -->
+
       <div class="card-section">
         <h2>Notes don't fail, Structure does.</h2>
         <p>
@@ -447,6 +475,7 @@
           knowledge actually works
         </p>
 
+        <!-- Card-1 -->
         <div class="card-container">
           <div class="card">
             <img
@@ -458,37 +487,44 @@
             <p>Your ideas live in 10 different apps, none of them connected.</p>
           </div>
 
+          <!-- Card-2 -->
           <div class="card">
             <img
-              src="assets/Vector.png"
+              src="assets/Bookmarks.png"
               alt="Vector-image"
               style="background: #ac0d22; padding: 10px; border-radius: 999px"
             />
-            <h3>Scattered notes</h3>
-            <p>Your ideas live in 10 different apps, none of them connected.</p>
+            <h3>Bookmark overload</h3>
+            <p>Hundreds of saved links you'll never revisit or remember.</p>
           </div>
 
+          <!-- Card-3 -->
           <div class="card">
             <img
-              src="assets/Vector.png"
+              src="assets/Brain.png"
               alt="Vector-image"
               style="background: #ac0d22; padding: 10px; border-radius: 999px"
             />
-            <h3>Scattered notes</h3>
-            <p>Your ideas live in 10 different apps, none of them connected.</p>
+            <h3>No idea connections</h3>
+            <p>
+              Insights stay isolated, never building into bigger understanding.
+            </p>
           </div>
 
+          <!-- Card-4 -->
           <div class="card">
             <img
-              src="assets/Vector.png"
+              src="assets/Info.png"
               alt="Vector-image"
               style="background: #ac0d22; padding: 10px; border-radius: 999px"
             />
-            <h3>Scattered notes</h3>
-            <p>Your ideas live in 10 different apps, none of them connected.</p>
+            <h3>Forgetting what you learned</h3>
+            <p>Knowledge fades because there's no system to retain it.</p>
           </div>
         </div>
       </div>
+
+      <!-- Image with text - Second brain -->
 
       <div class="image-with-text">
         <div class="iwt-left">
@@ -523,6 +559,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Early access section -->
 
       <div class="container">
         <div class="ea-container">
