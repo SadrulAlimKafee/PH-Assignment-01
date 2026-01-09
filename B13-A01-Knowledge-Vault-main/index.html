@@ -1,592 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PH - Assignment 01</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            /* background: #efefefd4; */
-        }
+      * {
+        margin: 0px;
+        padding: 0px;
+        /* background: #efefefd4; */
+      }
 
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 15px 0px;
-        }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px 0px;
+      }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
 
-        nav ul li a {
-            text-decoration: none;
-            font-weight: 600;
-            font-family: poppins;
-            font-size: 16px;
-            color: #222222;
-        }
+      nav ul li a {
+        text-decoration: none;
+        font-weight: 600;
+        font-family: poppins;
+        font-size: 16px;
+        color: #222222;
+      }
 
-        nav ul li a:hover {
-            text-decoration: underline;
-            text-decoration-color: teal;
-        }
+      nav ul li a:hover {
+        text-decoration: underline;
+        text-decoration-color: teal;
+      }
 
-        nav .btn {
-            background: teal;
-            color: #ffffff;
-            font-size: 16px;
-            font-family: poppins;
-            font-weight: 600;
-            border: 2px solid teal;
-            border-radius: 3px;
-            padding: 10px 25px;
-            cursor: pointer;
-        }
+      nav .btn {
+        background: teal;
+        color: #ffffff;
+        font-size: 16px;
+        font-family: poppins;
+        font-weight: 600;
+        border: 2px solid teal;
+        border-radius: 3px;
+        padding: 10px 25px;
+        cursor: pointer;
+      }
 
-        nav .btn:hover {
-            background: #ffffff;
-            color: teal;
-        }
+      nav .btn:hover {
+        background: #ffffff;
+        color: teal;
+      }
 
+      .hero {
+        display: grid;
+        justify-items: center;
+        text-align: center;
+        padding: 80px 20px 60px 20px;
+        gap: 25px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+          url("assets/hero-bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-        .hero {
-            display: grid;
-            justify-items: center;
-            text-align: center;
-            padding: 80px 20px 60px 20px;
-            gap: 25px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('assets/hero-bg.png');
-            background-size: cover;
-            /* Scales the image to fill the container */
-            background-position: center;
-            /* Centers the image */
-            background-repeat: no-repeat;
-        }
+      .hero h1 {
+        font-family: poppins;
+        font-weight: 700;
+        font-size: 48px;
+        color: #222222;
+      }
 
-        .hero h1 {
-            font-family: poppins;
-            font-weight: 700;
-            font-size: 48px;
-            color: #222222;
-        }
+      .hero p {
+        font-family: poppins;
+        font-weight: 400;
+        font-size: 18px;
+        color: #222222;
+        max-width: 700px;
+      }
 
-        .hero p {
-            font-family: poppins;
-            font-weight: 400;
-            font-size: 18px;
-            color: #222222;
-            max-width: 700px;
-        }
+      .hero .hbtn {
+        display: flex;
+        gap: 20px;
+      }
 
-        .hero .hbtn {
-            display: flex;
-            gap: 20px;
-        }
+      .hero .hbtn .btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: teal;
+        color: #ffffff;
+        font-size: 18px;
+        font-family: poppins;
+        font-weight: 600;
+        border: 2px solid teal;
+        border-radius: 3px;
+        padding: 10px 25px;
+        cursor: pointer;
+      }
 
-        .hero .hbtn .btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: teal;
-            color: #ffffff;
-            font-size: 18px;
-            font-family: poppins;
-            font-weight: 600;
-            border: 2px solid teal;
-            border-radius: 3px;
-            padding: 10px 25px;
-            cursor: pointer;
-        }
+      .hero .hbtn a {
+        text-decoration: none;
+      }
 
-        .hero .hbtn a {
-            text-decoration: none;
-        }
+      .hero .hbtn .btn img {
+        width: 20px;
+        height: 18px;
+        padding: 5px 0px 0px 0px;
+      }
 
-        .hero .hbtn .btn img {
-            width: 20px;
-            height: 18px;
-            padding: 5px 0px 0px 0px;
-        }
+      .hero .hbtn .btn:hover {
+        background: transparent;
+        color: #ffffff;
+      }
 
-        .hero .hbtn .btn:hover {
-            background: transparent;
-            color: #ffffff;
-        }
+      .hero #hbtn2 {
+        background: transparent;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        border-radius: 3px;
+      }
 
-        .hero #hbtn2 {
-            background: transparent;
-            color: #ffffff;
-            border: 2px solid #ffffff;
-            border-radius: 3px;
-        }
+      .hero #hbtn2:hover {
+        background: teal;
+        color: #ffffff;
+      }
 
-        .hero #hbtn2:hover {
-            background: teal;
-            color: #ffffff;
-        }
+      .hero .capsule {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #edededdd;
+        padding: 8px 15px;
+        border-radius: 999px;
+      }
 
-        .hero .capsule {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: #edededdd;
-            padding: 8px 15px;
-            border-radius: 999px;
-        }
+      .card-section {
+        display: grid;
+        justify-items: center;
+        gap: 20px;
+      }
 
-    .card-section {
-            display: grid;
-            justify-items: center;
-            gap: 20px;
-        }
+      .card-section h2 {
+        font-family: poppins;
+        font-weight: 700;
+        font-size: 32px;
+        color: #222222;
+        margin-top: 40px;
+      }
 
-        .card-section h2 {
-            font-family: poppins;
-            font-weight: 700;
-            font-size: 32px;
-            color: #222222;
-            margin-top: 40px;
-        }
+      .card-section p {
+        font-family: poppins;
+        font-weight: 400;
+        font-size: 18px;
+        color: #444444;
+      }
 
-        .card-section p {
-            font-family: poppins;
-            font-weight: 400;
-            font-size: 18px;
-            color: #444444;
-        }
+      .card-container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 30px 0px 0px 0px;
+      }
 
-        .card-container {
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            gap: 15px;
-            padding: 30px 0px 0px 0px;
-        }
+      .card {
+        display: grid;
+        background: #edededdd;
+        padding: 30px 25px;
+        width: 250px;
+        gap: 7px;
+        border-radius: 10px;
+      }
 
-        .card {
-            display: grid;
-            background: #edededdd;
-            padding: 30px 25px;
-            width: 250px;
-            gap: 7px;
-            border-radius: 10px;
-        }
+      .card:hover {
+        box-shadow: 0px 4px 15px #00000080;
+      }
 
-        .card:hover {
-            box-shadow: 0px 4px 15px #00000080;
-        }
+      .card h3 {
+        font-family: poppins;
+        font-weight: 600;
+        font-size: 20px;
+        color: #222222;
+      }
 
-        .card h3 {
-            font-family: poppins;
-            font-weight: 600;
-            font-size: 20px;
-            color: #222222;
-        }
+      .card p {
+        font-family: poppins;
+        font-weight: 400;
+        font-size: 16px;
+        color: #444444;
+      }
 
-        .card p {
-            font-family: poppins;
-            font-weight: 400;
-            font-size: 16px;
-            color: #444444;
-        }
+      .image-with-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 100px 0px;
+      }
 
+      .image-with-text .iwt-left {
+        max-width: 500px;
+      }
 
-         .image-with-text {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 100px 0px;
-        }
+      .image-with-text .iwt-left img {
+        width: 100%;
+        box-shadow: 0px 4px 15px #00000080;
+        border-radius: 15px;
+      }
 
-        .image-with-text .iwt-left {
-            max-width: 500px;
-        }
+      .image-with-text .iwt-right {
+        display: grid;
+        gap: 15px;
+        padding: 0px 40px;
+        max-width: 550px;
+      }
 
-        .image-with-text .iwt-left img {
-            width: 100%;
-            box-shadow: 0px 4px 15px #00000080;
-            border-radius: 15px;
-        }
+      .image-with-text .iwt-right h4 {
+        font-family: poppins;
+        font-size: 20px;
+        font-weight: 500;
+        color: teal;
+      }
 
-        .image-with-text .iwt-right {
-            display: grid;
-            gap: 15px;
-            padding: 0px 40px;
-            max-width: 550px;
-        }
+      .image-with-text .iwt-right h2 {
+        font-family: poppins;
+        font-size: 35px;
+        font-weight: 600;
+      }
 
-        .image-with-text .iwt-right h4 {
-            font-family: poppins;
-            font-size: 20px;
-            font-weight: 500;
-            color: teal;
-        }
+      .image-with-text .iwt-right p {
+        font-family: poppins;
+        font-size: 16px;
+        font-weight: 400;
+        color: #444444;
+      }
 
-        .image-with-text .iwt-right h2 {
-            font-family: poppins;
-            font-size: 35px;
-            font-weight: 600;
-        }
+      .image-with-text .iwt-right .icon-text {
+        display: flex;
+        gap: 10px;
+      }
 
-        .image-with-text .iwt-right p {
-            font-family: poppins;
-            font-size: 16px;
-            font-weight: 400;
-            color: #444444;
-        }
+      .image-with-text .iwt-right .icon-text img {
+        width: 25px;
+        height: 25px;
+      }
 
-        .image-with-text .iwt-right .icon-text {
-            display: flex;
-            gap: 10px;
-        }
+      .image-with-text .iwt-right .icon-text p {
+        font-family: poppins;
+        font-size: 16px;
+        font-weight: 400;
+      }
 
-        .image-with-text .iwt-right .icon-text img {
-            width: 25px;
-            height: 25px;
-        }
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+      }
 
-        .image-with-text .iwt-right .icon-text p {
-            font-family: poppins;
-            font-size: 16px;
-            font-weight: 400;
-        }
+      .ea-container {
+        display: grid;
+        text-align: center;
+        background: rgba(211, 211, 211, 0.509);
+        width: 100%;
+        max-width: 1000px;
+        gap: 15px;
+        padding: 50px 60px;
+        border-radius: 15px;
+      }
 
+      .ea-container h2 {
+        font-family: poppins;
+        font-size: 32px;
+        font-weight: 700;
+        color: #222222;
+      }
 
+      .ea-container p {
+        font-family: poppins;
+        font-size: 18px;
+        font-weight: 400;
+        color: #222222;
+      }
 
-         .container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 100px;
-        }
+      .ea-btn {
+        display: flex;
+        justify-content: center;
+      }
 
-        .ea-container {
-            display: grid;
-            text-align: center;
-            background: rgba(211, 211, 211, 0.509);
-            width: 100%;
-            max-width: 1000px;
-            gap: 15px;
-            padding: 50px 60px;
-            border-radius: 15px;
-        }
+      .ea-btn .btn {
+        background: teal;
+        color: #ffffff;
+        font-size: 18px;
+        font-family: poppins;
+        font-weight: 600;
+        border: 2px solid teal;
+        border-radius: 3px;
+        padding: 10px 25px;
+        cursor: pointer;
+      }
 
-        .ea-container h2 {
-            font-family: poppins;
-            font-size: 32px;
-            font-weight: 700;
-            color: #222222;
-        }
+      .ea-btn .btn:hover {
+        box-shadow: 0px 4px 15px #00000080;
+        font-style: italic;
+      }
 
-        .ea-container p {
-            font-family: poppins;
-            font-size: 18px;
-            font-weight: 400;
-            color: #222222;
-        }
+      .ea-btn .btn img {
+        width: 20px;
+        height: 18px;
+        padding: 5px 0px 0px 0px;
+      }
 
-        .ea-btn {
-            display: flex;
-            justify-content: center;
-        }
+      .ea-container .text {
+        display: flex;
+        justify-content: center;
+      }
 
-        .ea-btn .btn {
-            background: teal;
-            color: #ffffff;
-            font-size: 18px;
-            font-family: poppins;
-            font-weight: 600;
-            border: 2px solid teal;
-            border-radius: 3px;
-            padding: 10px 25px;
-            cursor: pointer;
-        }
+      .ea-container .text p {
+        font-family: poppins;
+        font-size: 14px;
+        font-weight: 400;
+        color: #222222;
+        margin: 0px 5px;
+      }
 
-        .ea-btn .btn:hover {
-            box-shadow: 0px 4px 15px #00000080;
-            font-style: italic;
-        }
+      .ft-main {
+        background: teal;
+        padding: 60px 0px 40px 0px;
+        gap: 30px;
+        align-items: center;
+        display: grid;
+        justify-content: center;
+      }
 
-        .ea-btn .btn img {
-            width: 20px;
-            height: 18px;
-            padding: 5px 0px 0px 0px;
-        }
+      .ft-container {
+        display: flex;
+        justify-content: space-between;
+      }
 
-        .ea-container .text {
-            display: flex;
-            justify-content: center;
-        }
+      .ft-container .ftcol-left {
+        display: grid;
+        width: 750px;
+      }
 
-        .ea-container .text p {
-            font-family: poppins;
-            font-size: 14px;
-            font-weight: 400;
-            color: #222222;
-            margin: 0px 5px;
-        }
-      
+      .ftcol-right {
+        display: grid;
+        gap: 15px;
+        width: 300px;
+      }
 
+      .ft-container .social {
+        color: #ffffff;
+        font-family: poppins;
+        font-weight: 500;
+        font-size: 20px;
+      }
 
-             .ft-main {
-            background: teal;
-            padding: 60px 0px 40px 0px;
-            gap: 30px;
-            align-items: center;
-            display: grid;
-            justify-content: center;
-        }
+      .ft-container .icons {
+        display: flex;
+        gap: 20px;
+      }
 
-        .ft-container {
-            display: flex;
-            justify-content: space-between;
+      .copyright {
+        justify-content: center;
+        align-items: center;
+      }
 
-        }
+      .ft-main .separator {
+        height: 1px;
+        background: #ffffff80;
+        margin: 0px;
+        width: 90%;
+      }
 
-        .ft-container .ftcol-left {
-            display: grid;
-            width: 750px;
-        }
-
-        .ftcol-right {
-            display: grid;
-            gap: 15px;
-            width: 300px;
-        }
-
-        .ft-container .social {
-            color: #ffffff;
-            font-family: poppins;
-            font-weight: 500;
-            font-size: 20px;
-        }
-
-        .ft-container .icons {
-            display: flex;
-            gap: 20px;
-        }
-
-        .copyright {
-            justify-content: center;
-            align-items: center;
-        }
-
-        .ft-main .separator {
-            height: 1px;
-            background: #ffffff80;
-            margin: 0px;
-            width: 90%;
-        }
-
-        .copyright p {
-            justify-self: center;
-            align-items: center;
-            color: #ffffff;
-            font-size: 14px;
-            font-family: poppins;
-            font-weight: 400;
-        }
+      .copyright p {
+        justify-self: center;
+        align-items: center;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: poppins;
+        font-weight: 400;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- header section -->
     <header>
-        <nav>
-            <img src="assets/logo-navbar.png" alt="logo">
+      <nav>
+        <img src="assets/logo-navbar.png" alt="logo" />
 
-            <ul>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">How it works</a></li>
-                <li><a href="#">Why it's different</a></li>
-            </ul>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">How it works</a></li>
+          <li><a href="#">Why it's different</a></li>
+        </ul>
 
-            <a href="#">
-                <button class="btn">Get Early Access</button>
-            </a>
-        </nav>
+        <a href="#">
+          <button class="btn">Get Early Access</button>
+        </a>
+      </nav>
     </header>
 
     <main>
-        <div class="hero">
-            <div class="capsule">
-                <div class="dot"></div>
-                <p>Early Access Now Open</p>
-            </div>
-            <h1>Structured thinking,
-                not just note-taking.</h1>
-            <p>A private space to store notes, links, and learning summaries — designed to
-                help you think clearly, connect ideas, and turn learning into long-term knowledge.</p>
-
-            <div class="hbtn">
-                <a href="#">
-                    <button class="btn">Get Early Access
-                        <img src="assets/ArrowRight.png" alt="">
-                    </button>
-                </a>
-
-                <a href="#">
-                    <button class="btn" id="hbtn2">
-                        <img src="assets/play.png" alt="">
-                        See How It Works
-                    </button>
-                </a>
-            </div>
+      <div class="hero">
+        <div class="capsule">
+          <div class="dot"></div>
+          <p>Early Access Now Open</p>
         </div>
+        <h1>Structured thinking, not just note-taking.</h1>
+        <p>
+          A private space to store notes, links, and learning summaries —
+          designed to help you think clearly, connect ideas, and turn learning
+          into long-term knowledge.
+        </p>
 
+        <div class="hbtn">
+          <a href="#">
+            <button class="btn">
+              Get Early Access
+              <img src="assets/ArrowRight.png" alt="" />
+            </button>
+          </a>
 
-        <div class="card-section">
-            <h2>Notes don't fail, Structure does.</h2>
-            <p>You're not bad at learning. Your tools just weren't built for how knowledge actually works</p>
-
-            <div class="card-container">
-                <div class="card">
-                    <img src="assets/Vector.png" alt="Vector-image"
-                        style="background: #ac0d22; padding: 10px; border-radius: 999px;">
-                    <h3>Scattered notes</h3>
-                    <p>
-                        Your ideas live in 10 different apps,
-                        none of them connected.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <img src="assets/Vector.png" alt="Vector-image"
-                        style="background: #ac0d22; padding: 10px; border-radius: 999px;">
-                    <h3>Scattered notes</h3>
-                    <p>
-                        Your ideas live in 10 different apps,
-                        none of them connected.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <img src="assets/Vector.png" alt="Vector-image"
-                        style="background: #ac0d22; padding: 10px; border-radius: 999px;">
-                    <h3>Scattered notes</h3>
-                    <p>
-                        Your ideas live in 10 different apps,
-                        none of them connected.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <img src="assets/Vector.png" alt="Vector-image"
-                        style="background: #ac0d22; padding: 10px; border-radius: 999px;">
-                    <h3>Scattered notes</h3>
-                    <p>
-                        Your ideas live in 10 different apps,
-                        none of them connected.
-                    </p>
-                </div>
-            </div>
+          <a href="#">
+            <button class="btn" id="hbtn2">
+              <img src="assets/play.png" alt="" />
+              See How It Works
+            </button>
+          </a>
         </div>
+      </div>
 
+      <div class="card-section">
+        <h2>Notes don't fail, Structure does.</h2>
+        <p>
+          You're not bad at learning. Your tools just weren't built for how
+          knowledge actually works
+        </p>
 
+        <div class="card-container">
+          <div class="card">
+            <img
+              src="assets/Vector.png"
+              alt="Vector-image"
+              style="background: #ac0d22; padding: 10px; border-radius: 999px"
+            />
+            <h3>Scattered notes</h3>
+            <p>Your ideas live in 10 different apps, none of them connected.</p>
+          </div>
 
-               <div class="image-with-text">
-            <div class="iwt-left">
-                <img src="assets/knowledge.png" alt="">
-            </div>
-            <div class="iwt-right">
-                <h4>The Solution</h4>
-                <h2>Your second brain,
-                    structured by design.</h2>
-                <p>
-                    Personal Knowledge Vault isn't another note-taking app. z
-                    It's a thinking environment where every note, link, and summary
-                    becomes part of an interconnected web of understanding.
-                </p>
-                <div class="icon-text">
-                    <img src="assets/CheckCircle.png" alt="">
-                    <p>Capture ideas with structure built-in from day one</p>
-                </div>
+          <div class="card">
+            <img
+              src="assets/Vector.png"
+              alt="Vector-image"
+              style="background: #ac0d22; padding: 10px; border-radius: 999px"
+            />
+            <h3>Scattered notes</h3>
+            <p>Your ideas live in 10 different apps, none of them connected.</p>
+          </div>
 
-                <div class="icon-text">
-                    <img src="assets/CheckCircle.png" alt="">
-                    <p>Connect related concepts automatically as you write</p>
-                </div>
+          <div class="card">
+            <img
+              src="assets/Vector.png"
+              alt="Vector-image"
+              style="background: #ac0d22; padding: 10px; border-radius: 999px"
+            />
+            <h3>Scattered notes</h3>
+            <p>Your ideas live in 10 different apps, none of them connected.</p>
+          </div>
 
-                <div class="icon-text">
-                    <img src="assets/CheckCircle.png" alt="">
-                    <p>Build lasting knowledge through reflection prompts</p>
-                </div>
-
-                <div class="icon-text">
-                    <img src="assets/CheckCircle.png" alt="">
-                    <p>Find anything instantly with semantic search</p>
-                </div>
-            </div>
+          <div class="card">
+            <img
+              src="assets/Vector.png"
+              alt="Vector-image"
+              style="background: #ac0d22; padding: 10px; border-radius: 999px"
+            />
+            <h3>Scattered notes</h3>
+            <p>Your ideas live in 10 different apps, none of them connected.</p>
+          </div>
         </div>
+      </div>
 
-
-
-                <div class="container">
-            <div class="ea-container">
-                <h2>Ready to think more clearly?</h2>
-                <p>Join thousands of learners who are building their personal knowledge vaults.
-                    Start free, no credit card required.</p>
-
-                <div class="ea-btn">
-                    <a href="#">
-                        <button class="btn">Get Early Access
-                            <img src="assets/ArrowRight.png" alt="">
-                        </button>
-                    </a>
-                </div>
-
-                <div class="text">
-                    <p>Free during early access •</p>
-                    <p>No credit card needed</p>
-                </div>
-            </div>
+      <div class="image-with-text">
+        <div class="iwt-left">
+          <img src="assets/knowledge.png" alt="" />
         </div>
+        <div class="iwt-right">
+          <h4>The Solution</h4>
+          <h2>Your second brain, structured by design.</h2>
+          <p>
+            Personal Knowledge Vault isn't another note-taking app. z It's a
+            thinking environment where every note, link, and summary becomes
+            part of an interconnected web of understanding.
+          </p>
+          <div class="icon-text">
+            <img src="assets/CheckCircle.png" alt="" />
+            <p>Capture ideas with structure built-in from day one</p>
+          </div>
+
+          <div class="icon-text">
+            <img src="assets/CheckCircle.png" alt="" />
+            <p>Connect related concepts automatically as you write</p>
+          </div>
+
+          <div class="icon-text">
+            <img src="assets/CheckCircle.png" alt="" />
+            <p>Build lasting knowledge through reflection prompts</p>
+          </div>
+
+          <div class="icon-text">
+            <img src="assets/CheckCircle.png" alt="" />
+            <p>Find anything instantly with semantic search</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="ea-container">
+          <h2>Ready to think more clearly?</h2>
+          <p>
+            Join thousands of learners who are building their personal knowledge
+            vaults. Start free, no credit card required.
+          </p>
+
+          <div class="ea-btn">
+            <a href="#">
+              <button class="btn">
+                Get Early Access
+                <img src="assets/ArrowRight.png" alt="" />
+              </button>
+            </a>
+          </div>
+
+          <div class="text">
+            <p>Free during early access •</p>
+            <p>No credit card needed</p>
+          </div>
+        </div>
+      </div>
     </main>
 
-     
-    
     <!-- footer section -->
     <footer>
-        <div class="ft-main">
-            <div class="ft-container">
-                <div class="ftcol-left">
-                    <img src="assets/logo-footer.png" alt="footer-logo">
-                </div>
-                <div class="ftcol-right">
-                    <h3 class="social">Social links</h3>
-                    <div class="icons">
-                        <a href="#">
-                            <img src="assets/twitter.png" alt="twitter-icon">
-                        </a>
-                        <a href="https://www.linkedin.com/in/sadrul-alim-kafee/">
-                            <img src="assets/linkedin.png" alt="linkedin-icon">
-                        </a>
-                        <a href="https://www.facebook.com/sadrulalim.kafee.3">
-                            <img src="assets/facebook.png" alt="facebook-icon">
-                        </a>
-                    </div>
-                </div>
+      <div class="ft-main">
+        <div class="ft-container">
+          <div class="ftcol-left">
+            <img src="assets/logo-footer.png" alt="footer-logo" />
+          </div>
+          <div class="ftcol-right">
+            <h3 class="social">Social links</h3>
+            <div class="icons">
+              <a href="#">
+                <img src="assets/twitter.png" alt="twitter-icon" />
+              </a>
+              <a href="https://www.linkedin.com/in/sadrul-alim-kafee/">
+                <img src="assets/linkedin.png" alt="linkedin-icon" />
+              </a>
+              <a href="https://www.facebook.com/sadrulalim.kafee.3">
+                <img src="assets/facebook.png" alt="facebook-icon" />
+              </a>
             </div>
-
-            <div class="separator"></div>
-
-            <div class="copyright">
-                <p>&copy; 2026 Personal Knowledge Vault. All rights reserved.</p>
-            </div>
+          </div>
         </div>
+
+        <div class="separator"></div>
+
+        <div class="copyright">
+          <p>&copy; 2026 Personal Knowledge Vault. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
