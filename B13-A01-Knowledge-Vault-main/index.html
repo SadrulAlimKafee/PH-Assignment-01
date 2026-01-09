@@ -41,7 +41,6 @@
         nav ul li a:hover {
             text-decoration: underline;
             text-decoration-color: teal;
-            te
         }
 
         nav .btn {
@@ -338,6 +337,66 @@
             margin: 0px 5px;
         }
       
+
+
+             .ft-main {
+            background: teal;
+            padding: 60px 0px 40px 0px;
+            gap: 30px;
+            align-items: center;
+            display: grid;
+            justify-content: center;
+        }
+
+        .ft-container {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .ft-container .ftcol-left {
+            display: grid;
+            width: 750px;
+        }
+
+        .ftcol-right {
+            display: grid;
+            gap: 15px;
+            width: 300px;
+        }
+
+        .ft-container .social {
+            color: #ffffff;
+            font-family: poppins;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .ft-container .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .copyright {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ft-main .separator {
+            height: 1px;
+            background: #ffffff80;
+            margin: 0px;
+            width: 90%;
+        }
+
+        .copyright p {
+            justify-self: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 14px;
+            font-family: poppins;
+            font-weight: 400;
+        }
     </style>
 </head>
 
@@ -495,7 +554,39 @@
         </div>
     </main>
 
-        
+     
+    
+    <!-- footer section -->
+    <footer>
+        <div class="ft-main">
+            <div class="ft-container">
+                <div class="ftcol-left">
+                    <img src="assets/logo-footer.png" alt="footer-logo">
+                </div>
+                <div class="ftcol-right">
+                    <h3 class="social">Social links</h3>
+                    <div class="icons">
+                        <a href="#">
+                            <img src="assets/twitter.png" alt="twitter-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/sadrul-alim-kafee/">
+                            <img src="assets/linkedin.png" alt="linkedin-icon">
+                        </a>
+                        <a href="https://www.facebook.com/sadrulalim.kafee.3">
+                            <img src="assets/facebook.png" alt="facebook-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Personal Knowledge Vault. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
